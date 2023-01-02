@@ -147,7 +147,7 @@ namespace WindowsFormsApp1
             if (document.IsOpen() == false)
             {
                 document.Open();
-                iTextSharp.text.Image img = iTextSharp.text.Image.GetInstance(@"C:\Users\emirc\Desktop\Masaüstü\Yeni klasör\HBYS\HBYS\bin\Debug\net6.0-windows\logo.jpg");
+                iTextSharp.text.Image img = iTextSharp.text.Image.GetInstance(System.IO.Path.GetDirectoryName(Application.ExecutablePath) + "/logo.jpg");
                 img.ScalePercent(24f);
                 document.Add(img);
                 document.Add(new Paragraph("Adı :" + textBox3.Text));
